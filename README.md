@@ -11,3 +11,5 @@ In other words don't sue, But please credit.
 <br>LinkedIn: https://www.linkedin.com/in/patrick-madonna/
 <br>Twitter: https://twitter.com/greeny_pm
 <br>Discord: GreenyPM#7976
+
+![Card](https://user-images.githubusercontent.com/81530437/213215063-f6d99b9f-5dfb-47f7-b063-448f630f6f9f.png)
