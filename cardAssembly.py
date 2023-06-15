@@ -1,21 +1,21 @@
 import cv2
-#import camera
-
+import webbrowser
+import os
 
 def cardCreator(type, name):
     #img = np.zeros((772,546,3),np.uint8)
 
     # Card Base
-    cardPokemon = cv2.imread('C:\\Users\\AlienUser\\Documents\\Python\\PokemonTypeTest\\Card Bases\\' + type + ".PNG")
+    cardPokemon = cv2.imread('Card Bases\\' + type + ".PNG")
     img = cardPokemon
     #cv2.imshow('Card', img)
 
 
     #Pictrue
-    personPic = cv2.imread('C:\\Users\\AlienUser\\Documents\\Python\\PokemonTypeTest\\PeoplePhotos\\Person.png')
+    personPic = cv2.imread('PeoplePhotos\\Person.png')
 
-    basicEnergy = cv2.imread('C:\\Users\\AlienUser\\Documents\\Python\\PokemonTypeTest\\Card Bases\\NormalSymbol.PNG')
-    typeEnergy = cv2.imread('C:\\Users\\AlienUser\\Documents\\Python\\PokemonTypeTest\\Card Bases\\' + type + 'Symbol.PNG')
+    basicEnergy = cv2.imread('Card Bases\\NormalSymbol.PNG')
+    typeEnergy = cv2.imread('Card Bases\\' + type + 'Symbol.PNG')
 
     te_x_offset = 30
     te_y_offset = 477
@@ -190,8 +190,10 @@ def cardCreator(type, name):
     imgResult[pic_y_offset:y_endp, pic_x_offset:x_endp] = personPic
     imgResult[be_y_offset:y_endbe, be_x_offset:x_endbe] = basicEnergy
     imgResult[te_y_offset:y_endte, te_x_offset:x_endte] = typeEnergy
-    cv2.imwrite("PeoplePhotos\Card.png", imgResult)
-    #os.startfile("PeoplePhotos\Card.png",'print')
+    cv2.imwrite("PeoplePhotos\\Card.png", imgResult)
+    webbrowser.open("PeoplePhotos\\indexCard.html")
+    os.startfile("PeoplePhotos\\Cardback.png", 'print')
+    os.startfile("PeoplePhotos\\Card.png", 'print')
 
 
 
